@@ -1,0 +1,19 @@
+{
+  "name": "http-node-example",
+  "version": "1.0.0",
+  "description": "node http example",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "node",
+    "http"
+  ],
+  "author": "Prahalad Belavadi",
+  "license": "MIT"
+}
