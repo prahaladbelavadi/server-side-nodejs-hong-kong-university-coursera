@@ -1,0 +1,22 @@
+{
+  "name": "npm-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "dnd"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "author": "prahalad belavadi",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
