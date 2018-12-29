@@ -25,4 +25,28 @@ dishRouter.route('/')
         res.end('Deleting all dishes');
     });
 
+
+    // // assignment - 1
+    dishRouter.route('/dishes/')
+    .all((req,res,next)=>{
+        res.statusCode =200;
+        res.setHeader('Content-Type', 'text/plain');
+        next();  
+    })
+    .get(':dishId',(req,res, next)=>{
+        res.end('Will send details about '+req.params.dishId + ' to you');
+    })
+    .post(':dishId',(req, res, next)=>{
+        res.statusCode = 403;
+        res.end('Post operation not supported on /dishes/:'+req.params.dishId);
+    })
+    .put(':dishId',(req,res, next)=>{
+        res.write('Updating the dish: '+req.params.dishId+'\n');
+        res.end('Will update the dish: '+req.body.name+'with details '+req.body.description)
+    })
+    .delete(':dishId',(req,res,next) =>{
+        res.end('Deleteing dish: '+ req.params/dishId)
+    });
+
+
 module.exports = dishRouter;
