@@ -45,7 +45,7 @@ dishRouter.route('/')
         res.end('Will update the dish: '+req.body.name+'with details '+req.body.description)
     })
     .delete((req,res,next) =>{
-        res.end('Deleteing dish: '+ req.params/dishId)
+        res.end('Deleteing dish: '+ req.params.dishId)
     });
 
 
