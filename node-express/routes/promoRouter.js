@@ -16,10 +16,10 @@ promoRouter.route('/')
     })
     .put((req,res,next)=>{
         res.statusCode= 403;
-        res.end('PUT operations not supported on /promtions')
+        res.end('PUT operations not supported on /promotions')
     })
     .post((req, res, next)=>{
-        res.end('Will add the promo to '+ req.params.name+' with details '+req.body.description)
+        res.end('Will add the promo to '+ req.body.name +' with details '+req.body.description)
     })
     .delete((req,res,next)=>{
         res.end('Deleting all promos');
@@ -33,18 +33,18 @@ promoRouter.route('/:promoId')
         next();
     })
     .get((req, res, next) => {
-        res.end('Will send details about ' + req.params.dishId + ' to you');
+        res.end('Will send details about ' + req.params.promoId + ' to you');
     })
     .post((req, res, next) => {
         res.statusCode = 403;
-        res.end('Post operation not supported on /dishes/:' + req.params.dishId);
+        res.end('Post operation not supported on /promotions/:' + req.params.promoId);
     })
     .put((req, res, next) => {
-        res.write('Updating the dish: ' + req.params.dishId + '\n');
-        res.end('Will update the dish: ' + req.body.name + 'with details ' + req.body.description)
+        res.write('Updating the promotion: ' + req.params.promoId + '\n');
+        res.end('Will update the promotion: ' + req.body.name + 'with details ' + req.body.description)
     })
     .delete((req, res, next) => {
-        res.end('Deleteing dish: ' + req.params / dishId)
+        res.end('Deleteing promotion: ' + req.params.promoId)
     });
 
     module.exports = promoRouter;
