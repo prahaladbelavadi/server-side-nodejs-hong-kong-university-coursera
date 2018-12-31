@@ -20,3 +20,7 @@ Local database store isn't exported. While cloning the repo you might have to ad
 Set path:`mongod --dbpath=data --bind_ip 127.0.0.1`
 instructions:https://www.coursera.org/learn/server-side-nodejs/supplement/kQAYt/exercise-instructions-introduction-to-mongodb
 mongod datastore is ignored in gitignore
+
+
+Reference:
+https://github.com/zeeshan87/Server-side-Development-with-NodeJS-Express-and-MongoDB
