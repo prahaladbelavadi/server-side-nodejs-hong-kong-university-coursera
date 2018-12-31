@@ -1,0 +1,23 @@
+{
+  "name": "node-mongo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "dnd"
+  },
+  "keywords": [
+    "mongo",
+    "node"
+  ],
+  "author": "prahaladbelavadi",
+  "license": "MIT",
+  "dependencies": {
+    "assert": "^1.4.1"
+  }
+}
