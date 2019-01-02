@@ -15,7 +15,7 @@ const mongoose = require('mongoose');
 
 const Dishes = require('./models/dishes');
 
-const url = 'mongodb://localhost:21017/conFusion'
+const url = 'mongodb://localhost:21017/conFusion/'
 const connect = mongoose.connect(url);
 
 connect.then((db)=>{
