@@ -15,14 +15,14 @@ const mongoose = require('mongoose');
 
 const Dishes = require('./models/dishes');
 
-const url = 'mongodb://localhost:21017/conFusion/'
-const connect = mongoose.connect(url);
+// const url = 'mongodb://localhost:27017/conFusion'
+// const connect = mongoose.connect(url, { useNewUrlParser: true });
 
-connect.then((db)=>{
-  console.log('Connected correctly to the server');
-}, (err)=>{
-  console.log(err);
-})
+// connect.then((db)=>{
+//   console.log('Connected correctly to the server; mongodbb port: 27017; testing endpoint: localhost:3000/dishes ');
+// }, (err)=>{
+//   console.log(err);
+// })
 
 
 var app = express();
@@ -41,9 +41,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('dishes', dishRouter);
+app.use('/dishes', dishRouter);
 app.use('/promotions', promoRouter);
-app.use('leaders', leaderRouter);
+app.use('/leaders', leaderRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -76,5 +76,5 @@ app.use(function(err, req, res, next) {
   });
 });
 
-
+app.listen(3050)
 module.exports = app;

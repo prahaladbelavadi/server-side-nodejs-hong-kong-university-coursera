@@ -4,6 +4,15 @@ const mongoose = require('mongoose');
 
 const Dishes =  require('../models/dishes');
 
+const url = 'mongodb://localhost:27017/conFusion'
+const connect = mongoose.connect(url, { useNewUrlParser: true });
+
+connect.then((db) => {
+    console.log('Connected correctly to the server; mongodbb port: 27017; testing endpoint: localhost:3000/dishes ');
+}, (err) => {
+    console.log(err);
+})
+
 const dishRouter = express.Router();
 
 dishRouter.use(bodyParser.json());
@@ -13,7 +22,7 @@ dishRouter.route('/')
     .get((req, res, next) => {
         Dishes.find({})
         
-            .then((dish)=>{
+            .then((dishes)=>{
 
                 res.statusCode = 200;
                 res.setHeader('Content-Type','application/json');
