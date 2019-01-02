@@ -31,9 +31,9 @@ dishRouter.route('/')
             },(err)=>next(err))
             .catch((err)=>next(err));
     })
-    .post((req, res, next) => {
+    .post((req, res, next) => {     
+        console.log(req.body);   
         Dishes.create(req.body)
-        
             .then((dish)=>{
 
                 console.log('Dish Created:'+dish)

@@ -46,7 +46,7 @@ const dishSchema = new Schema({
        default: ''
     },
     price:{
-        type:Currency,
+        type:String,
         required: true,
         min: 0
     },featured:{
@@ -56,7 +56,6 @@ const dishSchema = new Schema({
     comments: [commentSchema ]
 },{
         timestamps: true
-    
 });
 
 var Dishes  =  mongoose.model('Dish',dishSchema);
