@@ -85,8 +85,8 @@ dishRouter.route('/:dishId')
             $set:req.body
         },{new:true})
             .then((dish) => {
-
-                console.log('Dish Created:' + dish)
+// Need to understand how $set update works; can't verify how this works
+                console.log('Dish Updated:' + dish)
 
                 res.statusCode = 200;
                 res.setHeader('Content-Type', 'application/json');
@@ -99,7 +99,7 @@ dishRouter.route('/:dishId')
         Dishes.findByIdAndRemove(req.params.dishId)
             .then((resp) => {
 
-                console.log('Dish Created:' + dish)
+                console.log('Dish Deleted:' + dish)
 
                 res.statusCode = 200;
                 res.setHeader('Content-Type', 'application/json');
@@ -113,9 +113,11 @@ dishRouter.route('/:dishId')
     // supporting route for /localhost:300/dishes/:dishId/comments 
 
     dishRouter.route('/:dishId/comments')
-
+// get route note working on this route;
+// dish isn't defined
     .get((req, res, next) => {
-        Dishes.findById({req.params.dishId})
+        console.log(req)
+        Dishes.findById({ _id:req.params.dishId})
 
             .then((dishes) => {
                 if(dish != null){
