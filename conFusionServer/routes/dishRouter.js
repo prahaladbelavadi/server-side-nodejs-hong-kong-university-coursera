@@ -159,7 +159,7 @@ dishRouter.route('/:dishId/comments')
     })
     .delete((req, res, next) => {
         // cast to object id failed for value; doesn;t work; same rror : Cast to ObjectId failed for value
-        Dishes.findById(req.body)
+        Dishes.findById(req.params.dishId)
         .then((dish) => {
                 if (dish != null) {
                     for (var i = (dish.comments.length - 1); i>=0; i--){
