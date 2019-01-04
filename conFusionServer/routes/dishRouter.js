@@ -131,7 +131,7 @@ dishRouter.route('/:dishId/comments')
     .post((req, res, next) => {
         // console.log(req.params.dishId);Cast to ObjectId failed for value
         // Failing; cast to objectid  failed for value; how to add comment to comment array; How to add json to subdocument;how to parse _id in req.body; with {}/w/o "" ?
-        Dishes.findById(req.body)
+        Dishes.findById(req.params.dishId)
             .then((dish) => {
                 if (dish != null) {
                    
@@ -140,7 +140,7 @@ dishRouter.route('/:dishId/comments')
                     .then((dish)=>{
                         res.statusCode = 200;
                         res.setHeader('Content-Type', 'application/json');
-                        res.json(dishes);
+                        res.json(dish);
 
                     }, (err)=> next(err));
                      
