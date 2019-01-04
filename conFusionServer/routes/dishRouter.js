@@ -132,8 +132,8 @@ dishRouter.route('/:dishId')
             .catch((err) => next(err));
     })
     .post((req, res, next) => {
-        // console.log(req.params.dishId);
-        // Failing; cast to objectid  failed for value; how to add comment to comment array; How to add json to subdocument
+        // console.log(req.params.dishId);Cast to ObjectId failed for value
+        // Failing; cast to objectid  failed for value; how to add comment to comment array; How to add json to subdocument;how to parse _id in req.body; with {}/w/o "" ?
         Dishes.findById(req.body)
             .then((dish) => {
                 if (dish != null) {
@@ -161,9 +161,8 @@ dishRouter.route('/:dishId')
         res.end('PUT operation not supported on /dishes/'+ req.params.dishId+'/comments');
     })
     .delete((req, res, next) => {
-        // cast to object id failed for value
+        // cast to object id failed for value; doesn;t work; same rror : Cast to ObjectId failed for value
         Dishes.findById(req.body)
-
         .then((dish) => {
                 if (dish != null) {
                     for (var i = (dish.comments.length - 1); i>=0; i--){
@@ -173,7 +172,7 @@ dishRouter.route('/:dishId')
                         .then((dish) => {
                             res.statusCode = 200;
                             res.setHeader('Content-Type', 'application/json');
-                            res.json(dishes);
+                            res.json(dish);
                         
                         }, (err) => next(err));
 
@@ -196,7 +195,7 @@ dishRouter.route('/:dishId/comments/:commentId')
 
                     res.statusCode = 200;
                     res.setHeader('Content-Type', 'application/json');
-                    res.json(dishes.comments.id(req.params.commentId));
+                    res.json(dish.comments.id(req.params.commentId));
 
                 } else if (dish ==null){
                     err = new Error('Dish ' + req.params.dishId + ' not found')
@@ -205,7 +204,7 @@ dishRouter.route('/:dishId/comments/:commentId')
                 }
                 
                 else {
-                    err = new Error('Comment ' + req.params.commmentId + ' not found')
+                    err = new Error('Comment ' + req.params.commentId + ' not found')
                     err.status = 404;
                     return next(err);
                 }
@@ -218,6 +217,7 @@ dishRouter.route('/:dishId/comments/:commentId')
         res.end('Post operation not supported on /dishes/:' + req.params.dishId+'/comments/'+req.params.commentId);
     })
     .put((req, res, next) => {
+        // Cannot read property 'body' of undefined
         Dishes.findById(req.params.dishId)
              .then((dish) => {
                  
@@ -253,7 +253,9 @@ dishRouter.route('/:dishId/comments/:commentId')
     })
     .delete((req, res, next) => {
          Dishes.findById(req.body)
-
+         // does it need req.body to delete or can it do with route itself ?
+        // Cast to ObjectId failed for value
+        
             .then((dish) => {
                 if (dish != null && dish.comments.id(req.params.commentId) != null) {
                     
