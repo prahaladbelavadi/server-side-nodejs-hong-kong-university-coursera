@@ -29,3 +29,11 @@ Was an edge case scenario.
 
 Reference:
 https://github.com/zeeshan87/Server-side-Development-with-NodeJS-Express-and-MongoDB
+
+
+To learn: how to use a server side debugger;
+Bugs/Errors:
+- Semicolons
+- Returning dishes instead of dish or comments of dish; basically something that wasn't in the function scope
+- added colon to the reqest paramenter iteself; the req always failed because the req wasn't sent properly.
+- sending irrelevant data in the req; like delete req had body when it wasn't necessary or used on the backend

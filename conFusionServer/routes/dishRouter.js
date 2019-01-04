@@ -108,17 +108,17 @@ dishRouter.route('/:dishId')
 
     // supporting route for /localhost:300/dishes/:dishId/comments 
 
-    dishRouter.route('/:dishId/comments')
+dishRouter.route('/:dishId/comments')
     .get((req, res, next) => {
-        // console.log(req)
-        Dishes.findById({ "_id":req.params.dishId})
+        console.log('into get request');
+        Dishes.findById(req.params.dishId)
 
-            .then((dishes) => {
-                if(dishes != null){
+            .then((dish) => {
+                if(dish != null){
 
                     res.statusCode = 200;
                     res.setHeader('Content-Type', 'application/json');
-                    res.json(dishes.comments);
+                    res.json(dish.comments);
 
                 }else{
                     err = new Error('Comments of '+req.params.dishId+' not found')
@@ -217,19 +217,22 @@ dishRouter.route('/:dishId/comments/:commentId')
         // Cannot read property 'body' of undefined
         Dishes.findById(req.params.dishId)
              .then((dish) => {
-                 
+                 const { commentId } = req.params;
+                 console.log(dish.comments);
                 if (dish != null && dish.comments.id(req.params.commentId) != null) {
+                    console.log(dish.comments.id(req.params.commentId));
                     if(req.body.rating){
-                        dish.comments.id(req.params.commentId).req.body.rating 
+                        dish.comments.id(req.params.commentId).rating = req.body.rating 
                     }
                     if (req.body.comment){
-                        dish.comments.id(req.params.commentId).req.body.comment 
+                        dish.comments.id(req.params.commentId).comment = req.body.comment 
                     }
+                    console.log(dish);
                     dish.save()
-                         .then((dish) => {
+                         .then((updateddish) => {
                              res.statusCode = 200;
                              res.setHeader('Content-Type', 'application/json');
-                             res.json(dishes);
+                             res.json(updateddish.comments.id(req.params.commentId));
 
                          }, (err) => next(err));
 
