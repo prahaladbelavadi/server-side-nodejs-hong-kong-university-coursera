@@ -32,7 +32,6 @@ dishRouter.route('/')
             .catch((err)=>next(err));
     })
     .post((req, res, next) => {     
-        
         Dishes.create(req.body)
             .then((dish)=>{
 
@@ -103,7 +102,7 @@ dishRouter.route('/:dishId')
                 // need to send confirmation that dish has been deleted{n:1}
                 res.statusCode = 200;
                 res.setHeader('Content-Type', 'application/json');
-                res.json(resp);
+                res.json(resp);//sends deleted object; not confirmation
 
             }, (err) => next(err))
             .catch((err) => next(err))
@@ -113,8 +112,8 @@ dishRouter.route('/:dishId')
     // supporting route for /localhost:300/dishes/:dishId/comments 
 
     dishRouter.route('/:dishId/comments')
-// get route note working on this route;
-// dish isn't defined
+// get route not working on this route;
+// dish isn't defined: Fixed
     .get((req, res, next) => {
         // console.log(req)
         Dishes.findById({ "_id":req.params.dishId})
@@ -136,6 +135,7 @@ dishRouter.route('/:dishId')
     })
     .post((req, res, next) => {
         // console.log(req.params.dishId);
+        // Failing; cast to objectid  failed for value; how to add comment to comment array; How to add json to subdocument
         Dishes.findById(req.body)
             .then((dish) => {
                 if (dish != null) {
@@ -163,6 +163,7 @@ dishRouter.route('/:dishId')
         res.end('PUT operation not supported on /dishes/'+ req.params.dishId+'/comments');
     })
     .delete((req, res, next) => {
+        // cast to object id failed for value
         Dishes.findById(req.body)
 
         .then((dish) => {
