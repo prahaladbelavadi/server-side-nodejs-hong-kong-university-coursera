@@ -112,8 +112,6 @@ dishRouter.route('/:dishId')
     // supporting route for /localhost:300/dishes/:dishId/comments 
 
     dishRouter.route('/:dishId/comments')
-// get route not working on this route;
-// dish isn't defined: Fixed
     .get((req, res, next) => {
         // console.log(req)
         Dishes.findById({ "_id":req.params.dishId})
