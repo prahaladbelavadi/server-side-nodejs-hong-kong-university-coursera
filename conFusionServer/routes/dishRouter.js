@@ -32,11 +32,11 @@ dishRouter.route('/')
             .catch((err)=>next(err));
     })
     .post((req, res, next) => {     
-        console.log(req.body);   
+        
         Dishes.create(req.body)
             .then((dish)=>{
 
-                console.log('Dish Created:'+dish)
+                // console.log('Dish Created:'+dish)
 
                 res.statusCode = 200;
                 res.setHeader('Content-Type', 'application/json');
@@ -85,8 +85,8 @@ dishRouter.route('/:dishId')
             $set:req.body
         },{new:true})
             .then((dish) => {
-// Need to understand how $set update works; can't verify how this works
-                console.log('Dish Updated:' + dish)
+// Need to understand how $set update works; can't verify how this works; not working
+                // console.log('Dish Updated:' + dish)
 
                 res.statusCode = 200;
                 res.setHeader('Content-Type', 'application/json');
@@ -99,8 +99,8 @@ dishRouter.route('/:dishId')
         Dishes.findByIdAndRemove(req.params.dishId)
             .then((resp) => {
 
-                console.log('Dish Deleted:' + dish)
-
+                console.log('Dish Deleted:' + resp)
+                // need to send confirmation that dish has been deleted{n:1}
                 res.statusCode = 200;
                 res.setHeader('Content-Type', 'application/json');
                 res.json(resp);
@@ -116,18 +116,18 @@ dishRouter.route('/:dishId')
 // get route note working on this route;
 // dish isn't defined
     .get((req, res, next) => {
-        console.log(req)
-        Dishes.findById({ _id:req.params.dishId})
+        // console.log(req)
+        Dishes.findById({ "_id":req.params.dishId})
 
             .then((dishes) => {
-                if(dish != null){
+                if(dishes != null){
 
                     res.statusCode = 200;
                     res.setHeader('Content-Type', 'application/json');
                     res.json(dishes.comments);
 
                 }else{
-                    err = new Error('Dish '+req.params.dishId+' not found')
+                    err = new Error('Comments of '+req.params.dishId+' not found')
                     err.status = 404;
                     return next(err);
                 }
@@ -135,7 +135,7 @@ dishRouter.route('/:dishId')
             .catch((err) => next(err));
     })
     .post((req, res, next) => {
-        console.log(req.params.dishId);
+        // console.log(req.params.dishId);
         Dishes.findById(req.body)
             .then((dish) => {
                 if (dish != null) {
