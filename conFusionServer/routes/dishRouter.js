@@ -59,11 +59,10 @@ dishRouter.route('/')
                 .catch((err) => next(err))
     });
 
-
-// // assignment - 1
+// Routing for dishes/:dishId
 dishRouter.route('/:dishId')
     .get((req, res, next) => {
-        Dishes.findById(req.params.dishId)
+        Dishes.findById({_id: req.params.dishId})
             .then((dish) => {
 
                 console.log('Dish Created:' + dish)
@@ -84,7 +83,7 @@ dishRouter.route('/:dishId')
             $set:req.body
         },{new:true})
             .then((dish) => {
-// Need to understand how $set update works; can't verify how this works; not working
+                // Format for req: {x
                 // console.log('Dish Updated:' + dish)
 
                 res.statusCode = 200;
@@ -97,8 +96,6 @@ dishRouter.route('/:dishId')
     .delete((req, res, next) => {
         Dishes.findByIdAndRemove(req.params.dishId)
             .then((resp) => {
-
-                console.log('Dish Deleted:' + resp)
                 // need to send confirmation that dish has been deleted{n:1}
                 res.statusCode = 200;
                 res.setHeader('Content-Type', 'application/json');
@@ -255,7 +252,7 @@ dishRouter.route('/:dishId/comments/:commentId')
          Dishes.findById(req.body)
          // does it need req.body to delete or can it do with route itself ?
         // Cast to ObjectId failed for value
-        
+
             .then((dish) => {
                 if (dish != null && dish.comments.id(req.params.commentId) != null) {
                     
