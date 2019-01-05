@@ -158,7 +158,6 @@ dishRouter.route('/:dishId/comments')
         res.end('PUT operation not supported on /dishes/'+ req.params.dishId+'/comments');
     })
     .delete((req, res, next) => {
-        // cast to object id failed for value; doesn;t work; same rror : Cast to ObjectId failed for value
         Dishes.findById(req.params.dishId)
         .then((dish) => {
                 if (dish != null) {
@@ -214,7 +213,6 @@ dishRouter.route('/:dishId/comments/:commentId')
         res.end('Post operation not supported on /dishes/:' + req.params.dishId+'/comments/'+req.params.commentId);
     })
     .put((req, res, next) => {
-        // Cannot read property 'body' of undefined
         Dishes.findById(req.params.dishId)
              .then((dish) => {
                  const { commentId } = req.params;
@@ -252,9 +250,7 @@ dishRouter.route('/:dishId/comments/:commentId')
             .catch((err) => next(err))
     })
     .delete((req, res, next) => {
-         Dishes.findById(req.body)
-         // does it need req.body to delete or can it do with route itself ?
-        // Cast to ObjectId failed for value
+         Dishes.findById(req.params.dishId)
 
             .then((dish) => {
                 if (dish != null && dish.comments.id(req.params.commentId) != null) {
@@ -265,7 +261,7 @@ dishRouter.route('/:dishId/comments/:commentId')
                         .then((dish) => {
                             res.statusCode = 200;
                             res.setHeader('Content-Type', 'application/json');
-                            res.json(dishes);
+                            res.json(dish);
 
                         }, (err) => next(err));
 

@@ -37,3 +37,4 @@ Bugs/Errors:
 - Returning dishes instead of dish or comments of dish; basically something that wasn't in the function scope
 - added colon to the reqest paramenter iteself; the req always failed because the req wasn't sent properly.
 - sending irrelevant data in the req; like delete req had body when it wasn't necessary or used on the backend
+- cast to object id failed for value; doesn;t work; same rror : Cast to ObjectId failed for value; This likely happened because I was returning something that wasn't even in the scope of the function call or parsing req.body in the server when the request carried no body or misplacing req.body for req.params.dishId
