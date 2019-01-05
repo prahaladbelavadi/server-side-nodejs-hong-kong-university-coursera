@@ -231,7 +231,79 @@
 		{
 			"name": "localhost:3000/dishes/:dishId/comments/commentId",
 			"description": "",
-			"item": []
+			"item": [
+				{
+					"name": "localhost:3000/dishes/:dishId/comments/:commentId",
+					"request": {
+						"url": "localhost:3000/dishes/5c3055529957c03af8850fb3/comments/5c3055529957c03af8850fb8",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"name\": \"Uthappizza\",\r\n      \"image\": \"images/uthappizza.png\",\r\n      \"category\": \"mains\",\r\n      \"price\": \"4.99\",\r\n      \"featured\": \"true\",\r\n      \"description\": \"A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.\",\r\n      \"comments\": [\r\n        {\r\n          \"rating\": 5,\r\n          \"comment\": \"Imagine all the eatables, living in conFusion!\",\r\n          \"author\": \"John Lemon\",\r\n          \"date\": \"2012-10-16T17:57:28.556094Z\"\r\n        },\r\n        {\r\n          \"rating\": 4,\r\n          \"comment\": \"Sends anyone to heaven, I wish I could get my mother-in-law to eat it!\",\r\n          \"author\": \"Paul McVites\",\r\n          \"date\": \"2014-09-05T17:57:28.556094Z\"\r\n        },\r\n        {\r\n          \"rating\": 3,\r\n          \"comment\": \"Eat it, just eat it!\",\r\n          \"author\": \"Michael Jaikishan\",\r\n          \"date\": \"2015-02-13T17:57:28.556094Z\"\r\n        },\r\n        {\r\n          \"rating\": 4,\r\n          \"comment\": \"Ultimate, Reaching for the stars!\",\r\n          \"author\": \"Ringo Starry\",\r\n          \"date\": \"2013-12-02T17:57:28.556094Z\"\r\n        },\r\n        {\r\n          \"rating\": 2,\r\n          \"comment\": \"It's your birthday, we're gonna party!\",\r\n          \"author\": \"25 Cent\",\r\n          \"date\": \"2011-12-02T17:57:28.556094Z\"\r\n        }\r\n      ]\r\n    }"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes/:dishId/comments/:commentId",
+					"request": {
+						"url": "localhost:3000/dishes/5c3055529957c03af8850fb3/comments/5c3055529957c03af8850fb8",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"name\": \"Uthappizza\",\r\n      \"image\": \"images/uthappizza.png\",\r\n      \"category\": \"mains\",\r\n      \"price\": \"4.99\",\r\n      \"featured\": \"true\",\r\n      \"description\": \"A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.\",\r\n      \"comments\": [\r\n        {\r\n          \"rating\": 5,\r\n          \"comment\": \"Imagine all the eatables, living in conFusion!\",\r\n          \"author\": \"John Lemon\",\r\n          \"date\": \"2012-10-16T17:57:28.556094Z\"\r\n        },\r\n        {\r\n          \"rating\": 4,\r\n          \"comment\": \"Sends anyone to heaven, I wish I could get my mother-in-law to eat it!\",\r\n          \"author\": \"Paul McVites\",\r\n          \"date\": \"2014-09-05T17:57:28.556094Z\"\r\n        },\r\n        {\r\n          \"rating\": 3,\r\n          \"comment\": \"Eat it, just eat it!\",\r\n          \"author\": \"Michael Jaikishan\",\r\n          \"date\": \"2015-02-13T17:57:28.556094Z\"\r\n        },\r\n        {\r\n          \"rating\": 4,\r\n          \"comment\": \"Ultimate, Reaching for the stars!\",\r\n          \"author\": \"Ringo Starry\",\r\n          \"date\": \"2013-12-02T17:57:28.556094Z\"\r\n        },\r\n        {\r\n          \"rating\": 2,\r\n          \"comment\": \"It's your birthday, we're gonna party!\",\r\n          \"author\": \"25 Cent\",\r\n          \"date\": \"2011-12-02T17:57:28.556094Z\"\r\n        }\r\n      ]\r\n    }"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes/:dishId/comments/:commentId",
+					"request": {
+						"url": "localhost:3000/dishes/5c3055529957c03af8850fb3/comments/5c3055529957c03af8850fb8",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n          \"rating\": 1,\r\n\t      \"comment\": \"update\"\r\n          }"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes/:dishId/comments/:commentId",
+					"request": {
+						"url": "localhost:3000/dishes/5c3055529957c03af8850fb3/comments/5c3055529957c03af8850fb6",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
