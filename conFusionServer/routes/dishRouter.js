@@ -8,7 +8,7 @@ const url = 'mongodb://localhost:27017/conFusion'
 const connect = mongoose.connect(url, { useNewUrlParser: true });
 
 connect.then((db) => {
-    console.log('Connected correctly to the server; mongodbb port: 27017; testing endpoint: localhost:3000/dishes ');
+    console.log('DishRouter: Connected correctly to the server; testing endpoint: localhost:3000/dishes; mongodbb port: 27017;');
 }, (err) => {
     console.log(err);
 })

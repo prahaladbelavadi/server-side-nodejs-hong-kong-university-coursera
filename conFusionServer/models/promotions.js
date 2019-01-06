@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const  promotionSchema = new Schema({
     name:{
-        type: string,
+        type: String,
         required: true
     },
     image:{

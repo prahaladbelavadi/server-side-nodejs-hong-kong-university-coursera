@@ -1,5 +1,17 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+
+const Promotions= require('../models/promotions');
+
+const url = 'mongodb://localhost:27017/conFusion'
+const connect = mongoose.connect(url,  {useNewUrlParser:true });
+
+connect.then((db) => {
+    console.log('promoRouter: Connected correctly to the server; testing endpoint: localhost:3000/dishes; mongodbb port: 27017;');
+},(err)=>{
+    console.log(err);
+})
 
 const promoRouter = express.Router();
 
