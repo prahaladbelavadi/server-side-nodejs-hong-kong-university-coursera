@@ -20,7 +20,7 @@ const commentSchema =  new Schema({
          type:String,
          required: true
     }
-}, {
+    }, {
         timestamps: true
 
     })
@@ -38,10 +38,12 @@ const dishSchema = new Schema({
     image:{
         type: String,
         required: true
-    }, category: {
+    }, 
+    category: {
         type: String,
         required: true
-    }, label: {
+    }, 
+    label: {
         type: String,
        default: ''
     },
@@ -49,7 +51,8 @@ const dishSchema = new Schema({
         type:String,
         required: true,
         min: 0
-    },featured:{
+    },
+    featured:{
         type:Boolean,
         default: false 
     },
