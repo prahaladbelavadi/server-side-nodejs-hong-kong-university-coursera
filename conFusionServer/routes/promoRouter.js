@@ -55,9 +55,9 @@ promoRouter.route('/')
 
 promoRouter.route('/:promoId')
     .get((req, res, next) => {
-        Promotions.findById({_id:req.params.dish})
+        Promotions.findById({_id:req.params.promoId})
         .then((promotion)=>{
-            console.log('Promotion Created:'+ promotions)
+            console.log('Promotion Created:'+ promotion)
 
             res.statusCode = 200;
             res.setHeader('Content-Type','application/json');
