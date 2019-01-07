@@ -38,7 +38,7 @@ Bugs/Errors:
 - added colon to the reqest paramenter iteself; the req always failed because the req wasn't sent properly.
 - sending irrelevant data in the req; like delete req had body when it wasn't necessary or used on the backend
 - cast to object id failed for value; doesn;t work; same rror : Cast to ObjectId failed for value; This likely happened because I was returning something that wasn't even in the scope of the function call or parsing req.body in the server when the request carried no body or misplacing req.body for req.params.dishId
-
+- send request as an invalid type; Like the client sends a reques, it turns out to be in text or xml or some other format and the backend expects json in which case it throws up an error.
 
 --- 
 
