@@ -1,7 +1,7 @@
 # server-side-nodejs-hong-kong-university-coursera
 server-side-nodejs-hong-kong-university-coursera mooc course content, examples, excercises
 
-Continue from https://www.coursera.org/learn/server-side-nodejs/lecture/ceE9r/exercise-video-rest-api-with-express-mongodb-and-mongoose-part-1
+Continue from Week 3
 
 Time Stamp:- 23:03
 
@@ -42,4 +42,4 @@ Bugs/Errors:
 
 --- 
 
-promoters and dishes connect to the same database, different collections each named: Dishes and promotions
+promoters and dishes connect to the same database, different collections each named: Dishes, Promotions and Leaders
