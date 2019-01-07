@@ -531,6 +531,66 @@
 						}
 					],
 					"_postman_isSubFolder": true
+				},
+				{
+					"name": "localhost:3000/leaders/:leaderid",
+					"description": "",
+					"item": [
+						{
+							"name": "localhost:3000/leaders/leaderid",
+							"request": {
+								"url": "localhost:3000/leaders/5c333630886a473f48a975c3",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/leaders/:leaderid",
+							"request": {
+								"url": "localhost:3000/leaders/5c333630886a473f48a975c3",
+								"method": "POST",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/leaders/:leaderid",
+							"request": {
+								"url": "localhost:3000/leaders/5c333630886a473f48a975c3",
+								"method": "DELETE",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/leaders/:leaderid",
+							"request": {
+								"url": "localhost:3000/leaders/5c33581ee94cfb36c83533c4",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n      \"name\": \"Alberto Somayya\",\r\n      \"image\": \"images/alberto.png\",\r\n      \"designation\": \"Executive Chef\",\r\n      \"abbr\": \"EC\",\r\n      \"featured\": \"true\",\r\n      \"description\": \"Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!\"\r\n    }"
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
 				}
 			]
 		}
