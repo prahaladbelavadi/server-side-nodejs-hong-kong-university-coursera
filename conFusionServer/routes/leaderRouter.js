@@ -55,7 +55,7 @@ leaderRouter.route('/')
 // // assignment - 1
 leaderRouter.route('/:leaderId')
     .get((req, res, next) => {
-        Leaders.findById({ _id: req.params})
+        Leaders.findById({ _id: req.params.leaderId})
         .then((leader)=>{
             res.sendStatus= 200; 
             res.setHeader('Content-Type','application/json');
