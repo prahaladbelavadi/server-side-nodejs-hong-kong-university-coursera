@@ -54,25 +54,37 @@ leaderRouter.route('/')
 
 // // assignment - 1
 leaderRouter.route('/:leaderId')
-    .all((req, res, next) => {
-        res.statusCode = 200;
-        res.setHeader('Content-Type', 'text/plain');
-        next();
-    })
     .get((req, res, next) => {
-        res.end('Will send details about ' + req.params.leaderId + ' to you');
+        Leaders.findById({ _id: req.params})
+        .then((leader)=>{
+            res.sendStatus= 200; 
+            res.setHeader('Content-Type','application/json');
+            res.json(leader)
+        },(err)=>next(err))
+        .catch((err)=>next(err))
     })
     .post((req, res, next) => {
         res.statusCode = 403;
         res.end('Post operation not supported on /leaders/:' + req.params.leaderId);
     })
     .put((req, res, next) => {
-        res.write('Updating the leader: ' + req.params.leaderId + '\n');
-        res.end('Will update the leader: ' + req.body.name + ' with details ' + req.body.description)
+        Leaders.findByIdAndUpdate(req.params.leaderId,{
+            $set:req.body
+        },{new:true})
+        .then((leader)=>{
+            res.statusCode = 200;
+            res.setHeader('Content-Type','application/json');
+            res.json(leader);
+        },(err)=>next(err))
+        .catch((err)=>next(err))
     })
     .delete((req, res, next) => {
-        res.end('Deleteing leader: ' + req.params.leaderId)
+        Leaders.findByIdAndRemove(req.params.leaderId)
+        .then((resp)=>{
+            res.statusCode = 200;
+            res.setHeader('Content-Type','application/json'); 
+            res.json(resp);
+        })
     });
-
 
 module.exports = leaderRouter;
