@@ -4,11 +4,11 @@ const Schema = mongoose.Schema;
 const  promotionSchema = new Schema({
     name:{
         type: String,
-        required: true
+        required: true,
+        unique:true
     },
     image:{
-        type: String,
-        required: true
+        type: String        
     },
     label:{
         type: String,
@@ -18,7 +18,8 @@ const  promotionSchema = new Schema({
     type:String    
     },
     description:{
-        type:String
+        type:String,
+        required: true
     }
 
 });
