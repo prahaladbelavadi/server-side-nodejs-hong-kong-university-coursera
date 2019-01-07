@@ -1,31 +1,56 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+
+const Leaders = require('../models/leaders');
+
+const url =  'mongodb://localhost:27017/conFusion'
+const connect  = mongoose.connect(url);
+
+connect.then((db) => {
+    console.log('leaderRouter: Connected correctly to the server; testing endpoint: localhost:3000/dishes; mongodbb port: 27017;');
+}, (err) => {
+    console.log(err);
+})
 
 const leaderRouter = express.Router();
 
 leaderRouter.use(bodyParser.json());
 
-
 leaderRouter.route('/')
-    .all((req, res, next) => {
-        res.statusCode = 200;
-        res.setHeader('Content-Type', 'text/plain');
-        next();
-    })
     .get((req, res, next) => {
-        res.end('Will send all the leaders to you!');
+        Leaders.find({})
+
+            .then((leaders)=>{
+                res.statusCode = 200;
+                res.setHeader('Content-Type','application/json');
+                res.json(leaders)
+        
+            },(err)=>next(err))
+            .catch((err)=>next(err))
     })
     .post((req, res, next) => {
-        res.end('Will add the leader: ' + req.body.name + ' with details: ' + req.body.description);
+        Leaders.create(req.body)
+        .then((leaders)=>{
+            res.statusCode=200;
+            res.setHeader('Content-Type','application/json');
+            res.json(leaders)
+        },(err)=>next(err))
+        .catch((err)=>next(err));
     })
     .put((req, res, next) => {
         res.statusCode = 403;
         res.end('PUT operation not supported on /leaders');
     })
     .delete((req, res, next) => {
-        res.end('Deleting all leaders');
-    });
-
+        Leaders.remove({})
+        .then((resp)=>{
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.json(resp)
+        }, (err) => next(err))
+            .catch((err) => next(err))
+        });
 
 // // assignment - 1
 leaderRouter.route('/:leaderId')

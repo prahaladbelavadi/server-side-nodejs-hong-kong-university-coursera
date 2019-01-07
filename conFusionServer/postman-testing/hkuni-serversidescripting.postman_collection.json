@@ -458,6 +458,81 @@
 					"_postman_isSubFolder": true
 				}
 			]
+		},
+		{
+			"name": "leaders",
+			"description": "",
+			"item": [
+				{
+					"name": "localhost:3000/leaders",
+					"description": "",
+					"item": [
+						{
+							"name": "localhost:3000/leaders",
+							"request": {
+								"url": "localhost:3000/leaders",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/leaders",
+							"request": {
+								"url": "localhost:3000/leaders",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"name\":\"nameo\",\"description\":\"dumb dest\"}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/leaders",
+							"request": {
+								"url": "localhost:3000/leaders",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"name\":\"nameo\",\"description\":\"dumb dest\"}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/leaders",
+							"request": {
+								"url": "localhost:3000/leaders",
+								"method": "DELETE",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
 		}
 	]
 }
