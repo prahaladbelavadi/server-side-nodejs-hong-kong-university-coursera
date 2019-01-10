@@ -12,6 +12,8 @@ dependencies:
 - body-parser
 - morgan
 - express-generator
+- express session
+- file store
 
 
 there exists a local mongodb file in the repository that isn't being staged; because of a permissions; sudo doesn't work on windows.
