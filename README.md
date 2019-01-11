@@ -12,7 +12,7 @@ dependencies:
 - body-parser
 - morgan
 - express-generator
-
+passport@0.4.0 passport-local@1.0.0 passport-local-mongoose@5.0.1
 
 there exists a local mongodb file in the repository that isn't being staged; because of a permissions; sudo doesn't work on windows.
 
