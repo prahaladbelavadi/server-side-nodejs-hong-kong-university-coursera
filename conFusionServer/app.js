@@ -6,6 +6,9 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var FileStore =  require('session-file-store')(session);
+var passport = require('passport');
+var authenticate = require('./authenticate');
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -48,32 +51,24 @@ app.use(session({
   store: new FileStore()
 }));
 
+app.use(passport.initialize());
+app.use(passport.session());
+
  app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-function auth (req, res, next) {
-  console.log(req.session);
-
   function auth(req, res, next) {
-    console.log(req.session);
 
     if (!req.session.user) {
       var err = new Error('You are not authenticated!');
       err.status = 403;
       return next(err);
     }
-    else {
-      if (req.session.user === 'authenticated') {
-        next();
-      }
       else {
-        var err = new Error('You are not authenticated!');
-        err.status = 403;
-        return next(err);
+        next(); 
       }
     }
-  }
-}
+
 app.use(auth);
 app.use(express.static(path.join(__dirname, 'public')));
 
