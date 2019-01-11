@@ -2,3 +2,5 @@ node_modules
 package-lock.json
 mongodb
 .vscode
+sessions
+reference
