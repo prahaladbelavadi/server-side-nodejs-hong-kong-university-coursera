@@ -1117,6 +1117,166 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "passport-jwt",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"jaci\",\"password\":\"pass\"}"
+						},
+						"url": {
+							"raw": "localhost:3000/users/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"jaci\",\"password\":\"pass\"}"
+						},
+						"url": {
+							"raw": "localhost:3000/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/dishes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unauthorized localhost:3000/dishes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"wheat cake\",\n\t\"image\":\"\",\n\t\"category\":\"\",\n\t\"price\":\"4323\",\n\t\"description\":\"ewd\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes unauthorized",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"wheat cake\",\n\t\"image\":\"\",\n\t\"category\":\"\",\n\t\"price\":\"4323\",\n\t\"description\":\"ewd\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

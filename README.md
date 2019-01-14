@@ -40,7 +40,7 @@ Bugs/Errors:
 - send request as an invalid type; Like the client sends a reques, it turns out to be in text or xml or some other format and the backend expects json in which case it throws up an error.
 - Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they
 are sent to the client
-- 
+- throw new TypeError('JwtStrategy requires a secret or key')
 --- 
 
 promoters and dishes connect to the same database, different collections each named: Dishes, Promotions and Leaders
