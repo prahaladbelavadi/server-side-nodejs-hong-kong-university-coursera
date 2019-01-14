@@ -1,9 +1,8 @@
 # server-side-nodejs-hong-kong-university-coursera
 server-side-nodejs-hong-kong-university-coursera mooc course content, examples, excercises
 
-Continue from Week 3
-
-Time Stamp:- 23:03
+Stat:
+https://www.coursera.org/learn/server-side-nodejs/lecture/smZ4q/exercise-video-user-authentication-with-passport-and-json-web-token
 
 
 dependencies:
