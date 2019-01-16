@@ -2,8 +2,10 @@
 server-side-nodejs-hong-kong-university-coursera mooc course content, examples, excercises
 
 Stat:
-https://www.coursera.org/learn/server-side-nodejs/lecture/smZ4q/exercise-video-user-authentication-with-passport-and-json-web-token
+https://www.coursera.org/learn/server-side-nodejs/lecture/jvt4y/assignment-3-requirements-video-user-authentication
+I wokr and update changes directly to master branch. To view snapshots of stages of the course, you'd have to  approach the repo with day wise commits (IST) or can use bramches or can look for milestone quote references in commit log. There will be mistakes. I correct them as I come aceoss them. Feel free to correct a mistake that you find and open a PR
 
+Often I find that I learn best among people, but remote learning culture makes it increadibly hard. I also prefer sharing notes and homeones once an honest attempt is made trying to solve the problem for it saves time compared to breaking one's head over inconsistensis or minor mistakes. The reason i host this here is to act as a source of reference among the many to compare and debug as a group. By no means do I intend for you to cheat, but if looking at someone else's code can help you understand better, by all means use this. After all we are not the code we write. 
 
 dependencies:
 - nodejs
