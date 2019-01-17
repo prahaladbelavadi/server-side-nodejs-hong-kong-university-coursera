@@ -1,7 +1,7 @@
 # server-side-nodejs-hong-kong-university-coursera
-server-side-nodejs-hong-kong-university-coursera mooc course content, examples, excercises
+#####server-side-nodejs-hong-kong-university-coursera mooc course content, examples, excercises
 
-Stat:
+### Stat:
 https://www.coursera.org/learn/server-side-nodejs/lecture/jvt4y/assignment-3-requirements-video-user-authentication
 
 Assignement needs to be comepleted: https://www.coursera.org/learn/server-side-nodejs/peer/ouexI/user-authentication
@@ -11,7 +11,7 @@ I wokr and update changes directly to master branch. To view snapshots of stages
 
 Often I find that I learn best among people, but remote learning culture makes it increadibly hard. I also prefer sharing notes and homeones once an honest attempt is made trying to solve the problem for it saves time compared to breaking one's head over inconsistensis or minor mistakes. The reason i host this here is to act as a source of reference among the many to compare and debug as a group. By no means do I intend for you to cheat, but if looking at someone else's code can help you understand better, by all means use this. After all we are not the code we write. 
 
-dependencies:
+##### dependencies:
 - nodejs
 - express
 - body-parser
@@ -23,22 +23,25 @@ there exists a local mongodb file in the repository that isn't being staged; bec
 
 Local database store isn't exported. While cloning the repo you might have to add new path local db and instantate a new data store.
 
-/mongodb/data
+####/mongodb/data
 Set path:`mongod --dbpath=data --bind_ip 127.0.0.1`
 instructions:https://www.coursera.org/learn/server-side-nodejs/supplement/kQAYt/exercise-instructions-introduction-to-mongodb
 mongod datastore is ignored in gitignore
 
-setting admin: `db.users.update({"username":"admin"},{$set:{"admin":"true"}})`
+#####setting admin: 
+`db.users.update({"username":"admin"},{$set:{"admin":"true"}})`
 
-Mods: replace the mongoose currency schema with plain string since it wasn't complying and the value type is a string.
+#### Mods:
+ replace the mongoose currency schema with plain string since it wasn't complying and the value type is a string.
 Was an edge case scenario.
 
-Reference:
+### Reference:
 https://github.com/zeeshan87/Server-side-Development-with-NodeJS-Express-and-MongoDB
 
 
-To learn: how to use a server side debugger;
-Bugs/Errors:
+### To learn: 
+- how to use a server side debugger;
+### Bugs/Errors:
 - Semicolons
 - Returning dishes instead of dish or comments of dish; basically something that wasn't in the function scope
 - added colon to the reqest paramenter iteself; the req always failed because the req wasn't sent properly.
@@ -49,5 +52,14 @@ Bugs/Errors:
 are sent to the client
 - throw new TypeError('JwtStrategy requires a secret or key')
 --- 
+
+
+### To debug
+- Admin 
+    - get works @dishes
+    - unable to add dishes @dishes
+    - put not allowed
+    - unable to delete @dishes
+- Joe
 
 promoters and dishes connect to the same database, different collections each named: Dishes, Promotions and Leaders
