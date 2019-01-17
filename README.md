@@ -20,7 +20,7 @@ there exists a local mongodb file in the repository that isn't being staged; bec
 Local database store isn't exported. While cloning the repo you might have to add new path local db and instantate a new data store.
 
 /mongodb/data
-Set path:`mongod --dbpath=data --bind_ip 127.0.0.1`
+Set path:`mongod --dbpath=data ``--bind_ip 127.0.0.1`
 instructions:https://www.coursera.org/learn/server-side-nodejs/supplement/kQAYt/exercise-instructions-introduction-to-mongodb
 mongod datastore is ignored in gitignore
 
