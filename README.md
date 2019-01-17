@@ -22,6 +22,7 @@ Set path:`mongod --dbpath=data --bind_ip 127.0.0.1`
 instructions:https://www.coursera.org/learn/server-side-nodejs/supplement/kQAYt/exercise-instructions-introduction-to-mongodb
 mongod datastore is ignored in gitignore
 
+setting admin: `db.users.update({"username":"admin"},{$set:{"admin":"true"}})`
 
 Mods: replace the mongoose currency schema with plain string since it wasn't complying and the value type is a string.
 Was an edge case scenario.
