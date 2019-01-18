@@ -40,7 +40,7 @@ https://github.com/zeeshan87/Server-side-Development-with-NodeJS-Express-and-Mon
 
 
 ### To learn: 
-- how to use a server side debugger;
+- how to use a server side debugger; +1+1+1+1+1
 ### Bugs/Errors:
 - Semicolons
 - Returning dishes instead of dish or comments of dish; basically something that wasn't in the function scope
@@ -51,6 +51,9 @@ https://github.com/zeeshan87/Server-side-Development-with-NodeJS-Express-and-Mon
 - Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they
 are sent to the client
 - throw new TypeError('JwtStrategy requires a secret or key')
+- 401: I still can't find how or what causedthis;  It threw  up an 40 1 status and respoonded with unauthorized.
+- Object validation failed: Likelycause some logic failed like validating th user comments checking author
+- Validation mistake: undecipherable errors: could be because the request parsed is in text and not in json formmat as expected by backend
 --- 
 
 
