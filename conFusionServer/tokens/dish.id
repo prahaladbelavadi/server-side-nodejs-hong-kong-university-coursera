@@ -1,3 +1,0 @@
-5c3ed169094426239cde9a1f
-
-db.users.findOneAndDelete({"_id":"5c3ecfa1094426239cde9a1d"})
