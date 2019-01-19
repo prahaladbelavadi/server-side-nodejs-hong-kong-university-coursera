@@ -1561,7 +1561,7 @@
 			]
 		},
 		{
-			"name": "mongoose-population-admin",
+			"name": "mongoose-population-testcases",
 			"item": [
 				{
 					"name": "localhost:3000/users/signup",
@@ -1577,7 +1577,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"username\":\"moe\", \"password\":\"pass\",\"firstname\":\"molly\",\"lastname\":\"des\"}"
+							"raw": "{\r\n    \"firstname\": \"yuki-firstname\",\r\n    \"lastname\": \"yuki-lastname\",\r\n    \"username\": \"yuki\",\r\n    \"password\": \"pass\"\r\n}"
 						},
 						"url": {
 							"raw": "localhost:3000/users/signup",
@@ -1607,7 +1607,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"username\":\"admin\", \"password\":\"pass\",\"firstname\":\"ds\",\"lastname\":\"edes\"}"
+							"raw": "{\r\n    \"firstname\": \"admin-firstname\",\r\n    \"lastname\": \"admin-lastname\",\r\n    \"username\": \"admin\",\r\n    \"password\": \"pass\"\r\n}"
 						},
 						"url": {
 							"raw": "localhost:3000/users/signup",
@@ -1622,6 +1622,759 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "localhost:3000/users/login yuki",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"yuki\",\r\n    \"password\": \"pass\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/users/login admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"pass\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/users/ admin",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQzMTcxOWUwYjhmNDNlZDA0NTEwOGIiLCJpYXQiOjE1NDc5MDA4MzIsImV4cCI6MTU0NzkwNDQzMn0.OgbzbjeM_4Jw3GIJMAPm3DqEYnWwr4wO_0YqiQp48K8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/users/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/users/ yuki",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQzMTZkMWUwYjhmNDNlZDA0NTEwOGEiLCJpYXQiOjE1NDc5MDA3OTksImV4cCI6MTU0NzkwNDM5OX0.-5_xj-do3viKR31LRz5mfycmpO_D_QYSBREHzXgvfmk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/users/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes yuki",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQzMTZkMWUwYjhmNDNlZDA0NTEwOGEiLCJpYXQiOjE1NDc5MDA3OTksImV4cCI6MTU0NzkwNDM5OX0.-5_xj-do3viKR31LRz5mfycmpO_D_QYSBREHzXgvfmk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/dishes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes admin",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQzMTcxOWUwYjhmNDNlZDA0NTEwOGIiLCJpYXQiOjE1NDc5MDA4MzIsImV4cCI6MTU0NzkwNDQzMn0.OgbzbjeM_4Jw3GIJMAPm3DqEYnWwr4wO_0YqiQp48K8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/dishes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes/ admin add dishes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQzMTcxOWUwYjhmNDNlZDA0NTEwOGIiLCJpYXQiOjE1NDc5MDA4MzIsImV4cCI6MTU0NzkwNDQzMn0.OgbzbjeM_4Jw3GIJMAPm3DqEYnWwr4wO_0YqiQp48K8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Zucchipakoda\",\r\n    \"image\": \"images/zucchipakoda.png\",\r\n    \"category\": \"appetizer\",\r\n    \"label\": \"\",\r\n    \"price\": \"1.99\",\r\n    \"featured\": \"false\",\r\n    \"description\": \"Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce\"  \r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes/ no auth",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/dishes/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes/",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQzMTcxOWUwYjhmNDNlZDA0NTEwOGIiLCJpYXQiOjE1NDc5MDA4MzIsImV4cCI6MTU0NzkwNDQzMn0.OgbzbjeM_4Jw3GIJMAPm3DqEYnWwr4wO_0YqiQp48K8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Zucchipakoda\",\r\n    \"image\": \"images/zucchipakoda.png\",\r\n    \"category\": \"appetizer\",\r\n    \"label\": \"\",\r\n    \"price\": \"1.99\",\r\n    \"featured\": \"false\",\r\n    \"description\": \"Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce\"  \r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes/5c431cee59b6c60170474fd2",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQzMTcxOWUwYjhmNDNlZDA0NTEwOGIiLCJpYXQiOjE1NDc5MDA4MzIsImV4cCI6MTU0NzkwNDQzMn0.OgbzbjeM_4Jw3GIJMAPm3DqEYnWwr4wO_0YqiQp48K8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"label\": \"hot\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes/5c431cee59b6c60170474fd2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								"5c431cee59b6c60170474fd2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes/5c431cee59b6c60170474fd2/comments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQzMTcxOWUwYjhmNDNlZDA0NTEwOGIiLCJpYXQiOjE1NDc5MDA4MzIsImV4cCI6MTU0NzkwNDQzMn0.OgbzbjeM_4Jw3GIJMAPm3DqEYnWwr4wO_0YqiQp48K8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"label\": \"hot\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes/5c431cee59b6c60170474fd2/comments",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								"5c431cee59b6c60170474fd2",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes/5c431cee59b6c60170474fd2/comments",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQzMTcxOWUwYjhmNDNlZDA0NTEwOGIiLCJpYXQiOjE1NDc5MDA4MzIsImV4cCI6MTU0NzkwNDQzMn0.OgbzbjeM_4Jw3GIJMAPm3DqEYnWwr4wO_0YqiQp48K8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rating\": 5,\r\n    \"comment\": \"Thats one nice zuchipakoda\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes/5c431cee59b6c60170474fd2/comments",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								"5c431cee59b6c60170474fd2",
+								"comments"
+							]
+						},
+						"description": "add comments as admin to comments \n"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes/ no auth",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/dishes/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes/5c431cee59b6c60170474fd2/comments/5c431dff57327c10a0b6aaff del admin",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQzMTcxOWUwYjhmNDNlZDA0NTEwOGIiLCJpYXQiOjE1NDc5MDA4MzIsImV4cCI6MTU0NzkwNDQzMn0.OgbzbjeM_4Jw3GIJMAPm3DqEYnWwr4wO_0YqiQp48K8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rating\": 5,\r\n    \"comment\": \"Thats one nice zuchipakoda\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes/5c431cee59b6c60170474fd2/comments/5c431dff57327c10a0b6aaff",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								"5c431cee59b6c60170474fd2",
+								"comments",
+								"5c431dff57327c10a0b6aaff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes/5c431cee59b6c60170474fd2/comments/5c431dff57327c10a0b6aaff post admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQzMTcxOWUwYjhmNDNlZDA0NTEwOGIiLCJpYXQiOjE1NDc5MDA4MzIsImV4cCI6MTU0NzkwNDQzMn0.OgbzbjeM_4Jw3GIJMAPm3DqEYnWwr4wO_0YqiQp48K8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rating\": 5,\r\n    \"comment\": \"Thats one nice zuchipakoda\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes/5c431cee59b6c60170474fd2/comments/5c431dff57327c10a0b6aaff",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								"5c431cee59b6c60170474fd2",
+								"comments",
+								"5c431dff57327c10a0b6aaff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes/ get yuki",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQzMTZkMWUwYjhmNDNlZDA0NTEwOGEiLCJpYXQiOjE1NDc5MDA3OTksImV4cCI6MTU0NzkwNDM5OX0.-5_xj-do3viKR31LRz5mfycmpO_D_QYSBREHzXgvfmk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rating\": 5,\r\n    \"comment\": \"Thats one nice zuchipakoda\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes/ dishes yuki",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQzMTZkMWUwYjhmNDNlZDA0NTEwOGEiLCJpYXQiOjE1NDc5MDA3OTksImV4cCI6MTU0NzkwNDM5OX0.-5_xj-do3viKR31LRz5mfycmpO_D_QYSBREHzXgvfmk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ElaiCheese Cake\",\r\n    \"image\": \"images/elaicheesecake.png\",\r\n    \"category\": \"dessert\",\r\n    \"label\": \"\",\r\n    \"price\": \"2.99\",\r\n    \"featured\": \"false\",\r\n    \"description\": \"A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes/",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQzMTZkMWUwYjhmNDNlZDA0NTEwOGEiLCJpYXQiOjE1NDc5MDA3OTksImV4cCI6MTU0NzkwNDM5OX0.-5_xj-do3viKR31LRz5mfycmpO_D_QYSBREHzXgvfmk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ElaiCheese Cake\",\r\n    \"image\": \"images/elaicheesecake.png\",\r\n    \"category\": \"dessert\",\r\n    \"label\": \"\",\r\n    \"price\": \"2.99\",\r\n    \"featured\": \"false\",\r\n    \"description\": \"A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes/5c431cee59b6c60170474fd2/comments yuki",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQzMTZkMWUwYjhmNDNlZDA0NTEwOGEiLCJpYXQiOjE1NDc5MDA3OTksImV4cCI6MTU0NzkwNDM5OX0.-5_xj-do3viKR31LRz5mfycmpO_D_QYSBREHzXgvfmk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ElaiCheese Cake\",\r\n    \"image\": \"images/elaicheesecake.png\",\r\n    \"category\": \"dessert\",\r\n    \"label\": \"\",\r\n    \"price\": \"2.99\",\r\n    \"featured\": \"false\",\r\n    \"description\": \"A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes/5c431cee59b6c60170474fd2/comments",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								"5c431cee59b6c60170474fd2",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes/5c431cee59b6c60170474fd2/comments yuki",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQzMTZkMWUwYjhmNDNlZDA0NTEwOGEiLCJpYXQiOjE1NDc5MDA3OTksImV4cCI6MTU0NzkwNDM5OX0.-5_xj-do3viKR31LRz5mfycmpO_D_QYSBREHzXgvfmk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rating\": 5,\r\n    \"comment\": \"elaihchiu\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes/5c431cee59b6c60170474fd2/comments",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								"5c431cee59b6c60170474fd2",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes/5c431cee59b6c60170474fd2/comments/5c43216a057d3a1c6c30aec8 unable to update comments",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQzMTZkMWUwYjhmNDNlZDA0NTEwOGEiLCJpYXQiOjE1NDc5MDA3OTksImV4cCI6MTU0NzkwNDM5OX0.-5_xj-do3viKR31LRz5mfycmpO_D_QYSBREHzXgvfmk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rating\": 1,\r\n    \"comment\": \"elaihchiu\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes/5c431cee59b6c60170474fd2/comments/5c43216a057d3a1c6c30aec8",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								"5c431cee59b6c60170474fd2",
+								"comments",
+								"5c43216a057d3a1c6c30aec8"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "09a2bf3e-5dca-4c38-87e2-73f67a3be49b",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "93f02efe-6312-4c55-b0e7-e2082f856fb9",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
 				}
 			]
 		}
