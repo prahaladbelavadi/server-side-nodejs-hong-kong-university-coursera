@@ -39,7 +39,8 @@ exports.jwtPassport = passport.use(new JwtStrategy(opts,
     }));
 
 exports.verifyAdminUser = function (req,res, next){
-    User.findOne({_id:req.user._id})
+    console.log(req.user.id)
+    User.findOne({ _id: req.user.id})
     .then((user)=>{
         console.log("User: " + req.user);
         if(user.admin){
