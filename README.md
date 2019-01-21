@@ -56,10 +56,7 @@ are sent to the client
 
 ### To debug
 - Admin 
-    - get works @dishes
-    - unable to add dishes @dishes
-    - put not allowed
-    - unable to delete @dishes
+    - PUT does not work on dishes:dishid/comments
 - Joe
 
 promoters and dishes connect to the same database, different collections each named: Dishes, Promotions and Leaders
