@@ -55,8 +55,9 @@ are sent to the client
 
 
 ### To debug
-- Admin 
-    - PUT does not work on dishes:dishid/comments
-- Joe
+
+    - PUT does not work on dishes:dishid/comments for both admin and user
+
+    - non secure requests received at http://localhost:3000 or http://localhost:3343 are to be redirected and handled at https://localhost:3343
 
 promoters and dishes connect to the same database, different collections each named: Dishes, Promotions and Leaders
