@@ -221,7 +221,7 @@ dishRouter.route('/:dishId/comments/:commentId')
              .then((dish) => {
                  const { commentId } = req.params;
                  console.log(dish.comments);
-                 if (dish != null && dish.comments.id(req.params.commentId) != null && (dish.comments._id(req.params.commentId).author === req.user._id)) {
+                 if (dish != null && dish.comments.id(req.params.commentId) != null && ((dish.comments.id(req.params.commentId).author.id.toString('hex')) === req.user.id)) {
                     console.log(dish.comments.id(req.params.commentId));
                     if(req.body.rating){
                         dish.comments.id(req.params.commentId).rating = req.body.rating 
