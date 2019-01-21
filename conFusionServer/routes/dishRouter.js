@@ -219,7 +219,6 @@ dishRouter.route('/:dishId/comments/:commentId')
     .put(authenticate.verifyUser,(req, res, next) => {
         Dishes.findById(req.params.dishId)
              .then((dish) => {
-                 const { commentId } = req.params;
                  console.log(dish.comments);
                  if (dish != null && dish.comments.id(req.params.commentId) != null && ((dish.comments.id(req.params.commentId).author.id.toString('hex')) === req.user.id)) {
                     console.log(dish.comments.id(req.params.commentId));
