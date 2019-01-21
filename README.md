@@ -51,7 +51,9 @@ https://github.com/zeeshan87/Server-side-Development-with-NodeJS-Express-and-Mon
 - Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they
 are sent to the client
 - throw new TypeError('JwtStrategy requires a secret or key')
-- 401: I still can't find how or what causedthis;  It threw  up an 40 1 status and respoonded with unauthorized.
+- 401: 
+    - When showing to someone  it works; could be thaat the token has expired
+
 - Object validation failed: Likelycause some logic failed like validating th user comments checking author
 - Validation mistake: undecipherable errors: could be because the request parsed is in text and not in json formmat as expected by backend
 --- 
