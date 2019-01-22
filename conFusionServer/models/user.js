@@ -7,7 +7,7 @@ var User =  new Schema({
         type:String,
         default: ''
     }, 
-    lasttname: {
+    lastname: {
         type: String,
         default: ''
     },

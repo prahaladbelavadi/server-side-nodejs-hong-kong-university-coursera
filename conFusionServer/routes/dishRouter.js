@@ -38,7 +38,7 @@ dishRouter.route('/')
         Dishes.create(req.body)
             .then((dish)=>{
 
-                // console.log('Dish Created:'+dish)
+                console.log('Dish Created:'+ dish)
 
                 res.statusCode = 200;
                 res.setHeader('Content-Type', 'application/json');
@@ -219,9 +219,8 @@ dishRouter.route('/:dishId/comments/:commentId')
     .put(authenticate.verifyUser,(req, res, next) => {
         Dishes.findById(req.params.dishId)
              .then((dish) => {
-                 const { commentId } = req.params;
                  console.log(dish.comments);
-                 if (dish != null && dish.comments.id(req.params.commentId) != null && (dish.comments._id(req.params.commentId).author === req.user._id)) {
+                 if (dish != null && dish.comments.id(req.params.commentId) != null && ((dish.comments.id(req.params.commentId).author.id.toString('hex')) === req.user.id)) {
                     console.log(dish.comments.id(req.params.commentId));
                     if(req.body.rating){
                         dish.comments.id(req.params.commentId).rating = req.body.rating 

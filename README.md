@@ -1,7 +1,7 @@
 # server-side-nodejs-hong-kong-university-coursera
-server-side-nodejs-hong-kong-university-coursera mooc course content, examples, excercises
+#####server-side-nodejs-hong-kong-university-coursera mooc course content, examples, excercises
 
-Stat:
+### Stat:
 https://www.coursera.org/learn/server-side-nodejs/lecture/jvt4y/assignment-3-requirements-video-user-authentication
 
 Assignement needs to be comepleted: https://www.coursera.org/learn/server-side-nodejs/peer/ouexI/user-authentication
@@ -11,7 +11,7 @@ I wokr and update changes directly to master branch. To view snapshots of stages
 
 Often I find that I learn best among people, but remote learning culture makes it increadibly hard. I also prefer sharing notes and homeones once an honest attempt is made trying to solve the problem for it saves time compared to breaking one's head over inconsistensis or minor mistakes. The reason i host this here is to act as a source of reference among the many to compare and debug as a group. By no means do I intend for you to cheat, but if looking at someone else's code can help you understand better, by all means use this. After all we are not the code we write. 
 
-dependencies:
+##### dependencies:
 - nodejs
 - express
 - body-parser
@@ -23,24 +23,29 @@ there exists a local mongodb file in the repository that isn't being staged; bec
 
 Local database store isn't exported. While cloning the repo you might have to add new path local db and instantate a new data store.
 
+=======
+##### Set mongodb up in local env
 /mongodb/data
 Set path:`mongod --dbpath=data ``--bind_ip 127.0.0.1`
 instructions:https://www.coursera.org/learn/server-side-nodejs/supplement/kQAYt/exercise-instructions-introduction-to-mongodb
 mongod datastore is ignored in gitignore
 
-setting admin: `db.users.update({"username":"admin"},{$set:{"admin":"true"}})`
+##### setting admin: 
+`db.users.update({"username":"admin"},{$set:{"admin":"true"}})`
 
+#### Mods:
+ replace the mongoose currency schema with plain string since it wasn't complying and the value type is a string. 
+Was an edge case scenario.
 Setting admin: `db.users.update({"username":""admin},{$set:{"admin":"true"}})`
 
-Mods: replace the mongoose currency schema with plain string since it wasn't complying and the value type is a string.
-Was an edge case scenario.
 
-Reference:
+### Reference:
 https://github.com/zeeshan87/Server-side-Development-with-NodeJS-Express-and-MongoDB
 
 
-To learn: how to use a server side debugger;
-Bugs/Errors:
+### To learn: 
+- how to use a server side debugger; +1+1+1+1+1
+### Bugs/Errors:
 - Semicolons
 - Returning dishes instead of dish or comments of dish; basically something that wasn't in the function scope
 - added colon to the reqest paramenter iteself; the req always failed because the req wasn't sent properly.
@@ -50,6 +55,26 @@ Bugs/Errors:
 - Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they
 are sent to the client
 - throw new TypeError('JwtStrategy requires a secret or key')
+- 401: 
+    - When showing to someone  it works; could be thaat the token has expired
+
+- Object validation failed: Likelycause some logic failed like validating th user comments checking author
+- Validation mistake: undecipherable errors: could be because the request parsed is in text and not in json formmat as expected by backend
 --- 
+
+### To generate certificates and keys in bin
+Certs are not expoted since thy are different on different machines since different private keys are used. Different private keys are used since i'm using two different machines and both are using different private keys. Both are using different keys since I can't check them to github Then private keys won't be private anymmore.  Use the follwoig commands ot generate new keyscerts and pem files
+ 
+`
+openssl genrsa 1024 > private.key
+openssl req -new -key private.key -out cert.csr
+openssl x509 -req -in cert.csr -signkey private.key -out certificate.pem
+`
+
+### To debug
+
+    - PUT does not work on dishes:dishid/comments for both admin and user
+
+    - non secure requests received at http://localhost:3000 or http://localhost:3343 are to be redirected and handled at https://localhost:3343
 
 promoters and dishes connect to the same database, different collections each named: Dishes, Promotions and Leaders
