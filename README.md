@@ -58,6 +58,14 @@ are sent to the client
 - Validation mistake: undecipherable errors: could be because the request parsed is in text and not in json formmat as expected by backend
 --- 
 
+### To generate certificates and keys in bin
+Certs are not expoted since thy are different on different machines since different private keys are used. Different private keys are used since i'm using two different machines and both are using different private keys. Both are using different keys since I can't check them to github Then private keys won't be private anymmore.  Use the follwoig commands ot generate new keyscerts and pem files
+ 
+`
+openssl genrsa 1024 > private.key
+openssl req -new -key private.key -out cert.csr
+openssl x509 -req -in cert.csr -signkey private.key -out certificate.pem
+`
 
 ### To debug
 

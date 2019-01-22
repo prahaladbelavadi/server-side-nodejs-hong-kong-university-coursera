@@ -5,3 +5,5 @@ mongodb
 sessions
 reference
 private.key
+cert.csr
+certificate.pem
