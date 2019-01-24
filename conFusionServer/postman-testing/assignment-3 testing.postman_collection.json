@@ -470,7 +470,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Uthappizza\",\r\n    \"image\": \"images/uthappizza.png\",\r\n    \"category\": \"mains\",\r\n    \"label\": \"Hot\",\r\n    \"price\": \"4.99\",\r\n    \"featured\": \"true\",\r\n    \"description\": \"A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.\"\r\n}"
+							"raw": "{\r\n      \"name\": \"Zucchipakoda\",\r\n      \"image\": \"images/zucchipakoda.png\",\r\n      \"category\": \"appetizer\",\r\n      \"label\": \"\",\r\n      \"price\": \"1.99\",\r\n      \"featured\": \"false\",\r\n      \"description\": \"Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce\"\r\n}"
 						},
 						"url": {
 							"raw": "localhost:3000/dishes",
