@@ -1,0 +1,491 @@
+{
+	"info": {
+		"_postman_id": "50351699-52ee-499f-aba9-10d22b8bfc9e",
+		"name": "assignment-3 testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Check if a verified ordinary user also has Admin privileges.",
+			"item": [
+				{
+					"name": "localhost:3000/users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/users/signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"joe\",\"password\":\"pass\",\"firstname\":\"joeseph\",\"lastname\":\"Rowley king\" }"
+						},
+						"url": {
+							"raw": "localhost:3000/users/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/users/signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"admin\",\"password\":\"pass\",\"firstname\":\"joeseph\",\"lastname\":\"Rowley king\" }"
+						},
+						"url": {
+							"raw": "localhost:3000/users/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/users/login admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"admin\",\"password\":\"pass\",\"firstname\":\"joeseph\",\"lastname\":\"Rowley king\" }"
+						},
+						"url": {
+							"raw": "localhost:3000/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/users/login user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"joe\",\"password\":\"pass\",\"firstname\":\"joeseph\",\"lastname\":\"Rowley king\" }"
+						},
+						"url": {
+							"raw": "localhost:3000/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin-access",
+			"item": [
+				{
+					"name": "localhost:3000/dishes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQwNmM1MDI3ZTU4MjM3MTQ1ZWMyMmQiLCJpYXQiOjE1NDc3MjYxMDUsImV4cCI6MTU0NzcyOTcwNX0.y7fauqtiNG3kFfAUmavc1StRwpK6rrPIy2bkxKm2pkU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/dishes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQwNmM1MDI3ZTU4MjM3MTQ1ZWMyMmQiLCJpYXQiOjE1NDc3MjYxMDUsImV4cCI6MTU0NzcyOTcwNX0.y7fauqtiNG3kFfAUmavc1StRwpK6rrPIy2bkxKm2pkU",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n      \"name\": \"Zucchipakoda\",\r\n      \"image\": \"images/zucchipakoda.png\",\r\n      \"category\": \"appetizer\",\r\n      \"label\": \"\",\r\n      \"price\": \"1.99\",\r\n      \"featured\": \"false\",\r\n      \"description\": \"Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce\"\r\n }"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQwNmM1MDI3ZTU4MjM3MTQ1ZWMyMmQiLCJpYXQiOjE1NDc3MjYxMDUsImV4cCI6MTU0NzcyOTcwNX0.y7fauqtiNG3kFfAUmavc1StRwpK6rrPIy2bkxKm2pkU",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n      \"name\": \"Zucchipakoda\",\r\n      \"image\": \"images/zucchipakoda.png\",\r\n      \"category\": \"appetizer\",\r\n      \"label\": \"\",\r\n      \"price\": \"1.99\",\r\n      \"featured\": \"false\",\r\n      \"description\": \"Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce\"\r\n }"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQwNmM1MDI3ZTU4MjM3MTQ1ZWMyMmQiLCJpYXQiOjE1NDc3MjYxMDUsImV4cCI6MTU0NzcyOTcwNX0.y7fauqtiNG3kFfAUmavc1StRwpK6rrPIy2bkxKm2pkU",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\t {\r\n      \"name\": \"Zucchipakoda\",\r\n      \"image\": \"images/zucchipakoda.png\",\r\n      \"category\": \"appetizer\",\r\n      \"label\": \"\",\r\n      \"price\": \"1.99\",\r\n      \"featured\": \"false\",\r\n      \"description\": \"Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce\"\r\n }"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQwNmM1MDI3ZTU4MjM3MTQ1ZWMyMmQiLCJpYXQiOjE1NDc3MjYxMDUsImV4cCI6MTU0NzcyOTcwNX0.y7fauqtiNG3kFfAUmavc1StRwpK6rrPIy2bkxKm2pkU",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\t {\r\n      \"name\": \"Zucchipakoda\",\r\n      \"image\": \"images/zucchipakoda.png\",\r\n      \"category\": \"appetizer\",\r\n      \"label\": \"\",\r\n      \"price\": \"1.99\",\r\n      \"featured\": \"false\",\r\n      \"description\": \"Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce\"\r\n }"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ordinary-access",
+			"item": []
+		},
+		{
+			"name": "mis",
+			"item": [
+				{
+					"name": "localhost:3000/users/signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"yuki\",\r\n    \"firstname\": \"yuki-firstname\",\r\n    \"lastname\": \"yuki-lastname\",\r\n    \"password\": \"pass\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/users/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQwNmM1MDI3ZTU4MjM3MTQ1ZWMyMmQiLCJpYXQiOjE1NDc3MjYxMDUsImV4cCI6MTU0NzcyOTcwNX0.y7fauqtiNG3kFfAUmavc1StRwpK6rrPIy2bkxKm2pkU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/dishes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/users/signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"firstname\": \"admin-firstname\",\r\n    \"lastname\": \"admin-lastname\",\r\n    \"password\": \"pass\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/users/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/users/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"pass\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQxOGZjYWIxOWY4NDIzOWNjNjUzMWUiLCJpYXQiOjE1NDc4MDA1NTMsImV4cCI6MTU0NzgwNDE1M30.ieepr0Tg4RFOXmh8-g3zrl49IYGvLIAGGm91iHx1OkI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"name\": \"Zucchipakoda\",\r\n      \"image\": \"images/zucchipakoda.png\",\r\n      \"category\": \"appetizer\",\r\n      \"label\": \"\",\r\n      \"price\": \"1.99\",\r\n      \"featured\": \"false\",\r\n      \"description\": \"Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

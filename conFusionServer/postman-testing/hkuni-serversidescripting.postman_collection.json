@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "a050f0f0-7cdb-4679-b9e8-efa3d0c71a60",
+		"_postman_id": "aa0ba85e-c8e9-4279-aaa3-4854c974e82f",
 		"name": "hkuni-serversidescripting",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -1553,6 +1553,308 @@
 							"path": [
 								"dishes",
 								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "file upload",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/users/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"firstname\": \"admin-firstname\",\r\n    \"lastname\": \"admin-lastname\",\r\n    \"password\": \"pass\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/users/login https",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"firstname\": \"admin-firstname\",\r\n    \"lastname\": \"admin-lastname\",\r\n    \"password\": \"pass\"\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:3443/users/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/imageUpload",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQ4NDA2NDZhMTg2YzFkODA5YzA2ODEiLCJpYXQiOjE1NDgyMzg5NTksImV4cCI6MTU0ODI0MjU1OX0.oZym27leZEYd-ZJM56ix5sgfnKPExoUzBnsTBdMdD6E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imageFile",
+									"type": "file",
+									"src": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:3443/imageUpload",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"imageUpload"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cors",
+			"item": [
+				{
+					"name": "localhost:3000/dishes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/dishes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/disheslogin admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\":\"admin\",\n\t\"password\":\"pass\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishessame origin header",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQ4NDA2NDZhMTg2YzFkODA5YzA2ODEiLCJpYXQiOjE1NDgzOTc2NDcsImV4cCI6MTU0ODQwMTI0N30.Pu-KFkkNiOARMYYYVE6CdicSqa8DLCG3z2Wjn2bQ-Rw",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\":\"admin\",\n\t\"password\":\"pass\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes different origin",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQ4NDA2NDZhMTg2YzFkODA5YzA2ODEiLCJpYXQiOjE1NDgzOTc2NDcsImV4cCI6MTU0ODQwMTI0N30.Pu-KFkkNiOARMYYYVE6CdicSqa8DLCG3z2Wjn2bQ-Rw",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:2000",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\":\"admin\",\n\t\"password\":\"pass\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/dishes options preflighting ",
+					"request": {
+						"method": "OPTIONS",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQ4NDA2NDZhMTg2YzFkODA5YzA2ODEiLCJpYXQiOjE1NDgzOTc2NDcsImV4cCI6MTU0ODQwMTI0N30.Pu-KFkkNiOARMYYYVE6CdicSqa8DLCG3z2Wjn2bQ-Rw",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\":\"admin\",\n\t\"password\":\"pass\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:3443/dishes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"dishes"
 							]
 						}
 					},
