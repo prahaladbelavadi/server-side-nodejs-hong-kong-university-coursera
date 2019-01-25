@@ -1861,6 +1861,126 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "facebook-oauth",
+			"item": [
+				{
+					"name": "https://localhost:3443/users/facebook/token",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							},
+							{
+								"key": "access_token",
+								"value": "EAANbbcUNxnUBALYOtdyGjcrR9pzOIxnjPUC3EVrOZBXHS7ffaBvbskK1dTStpULOYbsuHVMEAVpLbeGOhcWsqtWTsAkJiZCk5lKKZC6DOuliZC4ZCZCZCQ3MK0irZBU10fGZC4okms6NISZA4UZBZBl3s7imPGyB2sJAZBpv5odtkPfb9bgZC6PP52P8QH1LD3Cc3Q8JtJfIrVJptuXgZDZD",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:3443/users/facebook/token",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"users",
+								"facebook",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/users/facebook/token",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer EAANbbcUNxnUBALYOtdyGjcrR9pzOIxnjPUC3EVrOZBXHS7ffaBvbskK1dTStpULOYbsuHVMEAVpLbeGOhcWsqtWTsAkJiZCk5lKKZC6DOuliZC4ZCZCZCQ3MK0irZBU10fGZC4okms6NISZA4UZBZBl3s7imPGyB2sJAZBpv5odtkPfb9bgZC6PP52P8QH1LD3Cc3Q8JtJfIrVJptuXgZDZD",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:3443/users/facebook/token",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"users",
+								"facebook",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/users/facebook/token?access_token=EAANbbcUNxnUBALYOtdyGjcrR9pzOIxnjPUC3EVrOZBXHS7ffaBvbskK1dTStpULOYbsuHVMEAVpLbeGOhcWsqtWTsAkJiZCk5lKKZC6DOuliZC4ZCZCZCQ3MK0irZBU10fGZC4okms6NISZA4UZBZBl3s7imPGyB2sJAZBpv5odtkPfb9bgZC6PP52P8QH1LD3Cc3Q8JtJfIrVJptuXgZDZD",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer EAANbbcUNxnUBALYOtdyGjcrR9pzOIxnjPUC3EVrOZBXHS7ffaBvbskK1dTStpULOYbsuHVMEAVpLbeGOhcWsqtWTsAkJiZCk5lKKZC6DOuliZC4ZCZCZCQ3MK0irZBU10fGZC4okms6NISZA4UZBZBl3s7imPGyB2sJAZBpv5odtkPfb9bgZC6PP52P8QH1LD3Cc3Q8JtJfIrVJptuXgZDZD",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:3443/users/facebook/token?access_token=EAANbbcUNxnUBALYOtdyGjcrR9pzOIxnjPUC3EVrOZBXHS7ffaBvbskK1dTStpULOYbsuHVMEAVpLbeGOhcWsqtWTsAkJiZCk5lKKZC6DOuliZC4ZCZCZCQ3MK0irZBU10fGZC4okms6NISZA4UZBZBl3s7imPGyB2sJAZBpv5odtkPfb9bgZC6PP52P8QH1LD3Cc3Q8JtJfIrVJptuXgZDZD",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"users",
+								"facebook",
+								"token"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "EAANbbcUNxnUBALYOtdyGjcrR9pzOIxnjPUC3EVrOZBXHS7ffaBvbskK1dTStpULOYbsuHVMEAVpLbeGOhcWsqtWTsAkJiZCk5lKKZC6DOuliZC4ZCZCZCQ3MK0irZBU10fGZC4okms6NISZA4UZBZBl3s7imPGyB2sJAZBpv5odtkPfb9bgZC6PP52P8QH1LD3Cc3Q8JtJfIrVJptuXgZDZD"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
