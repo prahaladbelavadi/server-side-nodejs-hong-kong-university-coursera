@@ -1979,6 +1979,245 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "https://localhost:3443/users/facebook/token",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer EAANbbcUNxnUBAAxo8EMSFiASyZAYpDwKs9FlrZB5HCQYiU6ZAugWi7ek4AxZBEV5YodzoatUbp1FHt7eRvZBJN7AE2sycsYmQBxfkZCoNTfL1cEFprRo03auLtCFqJqBWeNd6I4goiL4mz8jq2SDLr0ltOgvmpnUT4nw42zoadxQZDZD",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:3443/users/facebook/token",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"users",
+								"facebook",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/users/facebook/token",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							},
+							{
+								"key": "access_token",
+								"value": "EAANbbcUNxnUBAAxo8EMSFiASyZAYpDwKs9FlrZB5HCQYiU6ZAugWi7ek4AxZBEV5YodzoatUbp1FHt7eRvZBJN7AE2sycsYmQBxfkZCoNTfL1cEFprRo03auLtCFqJqBWeNd6I4goiL4mz8jq2SDLr0ltOgvmpnUT4nw42zoadxQZDZD",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:3443/users/facebook/token",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"users",
+								"facebook",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/users/facebook/token?access_token=EAANbbcUNxnUBAAxo8EMSFiASyZAYpDwKs9FlrZB5HCQYiU6ZAugWi7ek4AxZBEV5YodzoatUbp1FHt7eRvZBJN7AE2sycsYmQBxfkZCoNTfL1cEFprRo03auLtCFqJqBWeNd6I4goiL4mz8jq2SDLr0ltOgvmpnUT4nw42zoadxQZDZD",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							},
+							{
+								"key": "access_token",
+								"value": "EAANbbcUNxnUBAAxo8EMSFiASyZAYpDwKs9FlrZB5HCQYiU6ZAugWi7ek4AxZBEV5YodzoatUbp1FHt7eRvZBJN7AE2sycsYmQBxfkZCoNTfL1cEFprRo03auLtCFqJqBWeNd6I4goiL4mz8jq2SDLr0ltOgvmpnUT4nw42zoadxQZDZD",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:3443/users/facebook/token?access_token=EAANbbcUNxnUBAAxo8EMSFiASyZAYpDwKs9FlrZB5HCQYiU6ZAugWi7ek4AxZBEV5YodzoatUbp1FHt7eRvZBJN7AE2sycsYmQBxfkZCoNTfL1cEFprRo03auLtCFqJqBWeNd6I4goiL4mz8jq2SDLr0ltOgvmpnUT4nw42zoadxQZDZD",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"users",
+								"facebook",
+								"token"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "EAANbbcUNxnUBAAxo8EMSFiASyZAYpDwKs9FlrZB5HCQYiU6ZAugWi7ek4AxZBEV5YodzoatUbp1FHt7eRvZBJN7AE2sycsYmQBxfkZCoNTfL1cEFprRo03auLtCFqJqBWeNd6I4goiL4mz8jq2SDLr0ltOgvmpnUT4nw42zoadxQZDZD"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "favorites",
+			"item": [
+				{
+					"name": "https://localhost:3443/users/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"yuki\",\n\t\"username\":\"yuki\",\n\t\"password\":\"pass\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:3443/users/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/dishes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg1MzQzNjQsImV4cCI6MTU0ODUzNzk2NH0.NqjfB_W2baSnFXR5s9Qj1KAnBuRpV38DuIh40zlj0h4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"yuki\",\n\t\"username\":\"yuki\",\n\t\"password\":\"pass\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:3443/dishes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg2NTYxNjEsImV4cCI6MTU0ODY1OTc2MX0.1LSdkLWNirhHq3Dy-BJDPiqBzVLcCWiqXbxLZ2SIoI4",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"yuki\",\n\t\"username\":\"yuki\",\n\t\"password\":\"pass\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites"
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
