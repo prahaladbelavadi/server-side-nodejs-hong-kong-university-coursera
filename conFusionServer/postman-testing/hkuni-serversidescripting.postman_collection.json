@@ -2218,6 +2218,549 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "https://localhost:3443/dishes/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg2NTcwMTIsImV4cCI6MTU0ODY2MDYxMn0.6dTZViF72jZcvpHNsLt4Ca3QbA3uwnO9dFi3EIF9lUQ",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n      \"name\": \"Vadonut\",\r\n      \"image\": \"images/vadonut.png\",\r\n      \"category\": \"appetizer\",\r\n      \"label\": \"New\",\r\n      \"price\": \"1.99\",\r\n      \"featured\": \"false\",\r\n      \"description\": \"A quintessential ConFusion experience, is it a vada or is it a donut?\"\r\n    }\r\n  "
+						},
+						"url": {
+							"raw": "https://localhost:3443/dishes/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"dishes",
+								""
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg2NTcwMTIsImV4cCI6MTU0ODY2MDYxMn0.6dTZViF72jZcvpHNsLt4Ca3QbA3uwnO9dFi3EIF9lUQ",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites",
+								""
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites/5c4ea11580477a3b74d1890d",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg2NTcwMTIsImV4cCI6MTU0ODY2MDYxMn0.6dTZViF72jZcvpHNsLt4Ca3QbA3uwnO9dFi3EIF9lUQ",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites/5c4ea11580477a3b74d1890d",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites",
+								"5c4ea11580477a3b74d1890d"
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg2NTcwMTIsImV4cCI6MTU0ODY2MDYxMn0.6dTZViF72jZcvpHNsLt4Ca3QbA3uwnO9dFi3EIF9lUQ",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\t\n\t{ \"_id\" : \"5c4ea12280477a3b74d1890e\" }\t\n]"
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites",
+								""
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites/",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg2NTcwMTIsImV4cCI6MTU0ODY2MDYxMn0.6dTZViF72jZcvpHNsLt4Ca3QbA3uwnO9dFi3EIF9lUQ",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\t\n\t{ \"_id\" : \"5c4ea12280477a3b74d1890e\" }\t\n]"
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites",
+								""
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg2NTcwMTIsImV4cCI6MTU0ODY2MDYxMn0.6dTZViF72jZcvpHNsLt4Ca3QbA3uwnO9dFi3EIF9lUQ",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\t\n\t{ \"_id\" : \"5c4ea10380477a3b74d1890c\" },\n\t{ \"_id\" : \"5c4ea11580477a3b74d1890d\" },\n\t{ \"_id\" : \"5c4ea12280477a3b74d1890e\" }\n]"
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites",
+								""
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg2NTcwMTIsImV4cCI6MTU0ODY2MDYxMn0.6dTZViF72jZcvpHNsLt4Ca3QbA3uwnO9dFi3EIF9lUQ",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\t\n\t{ \"_id\" : \"5c4ea10380477a3b74d1890c\" },\n\t{ \"_id\" : \"5c4ea11580477a3b74d1890d\" },\n\t{ \"_id\" : \"5c4ea12280477a3b74d1890e\" }\n]"
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites",
+								""
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites/5c4ea10380477a3b74d1890c",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg2NTcwMTIsImV4cCI6MTU0ODY2MDYxMn0.6dTZViF72jZcvpHNsLt4Ca3QbA3uwnO9dFi3EIF9lUQ",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\t\n\t{ \"_id\" : \"5c4ea10380477a3b74d1890c\" },\n\t{ \"_id\" : \"5c4ea11580477a3b74d1890d\" },\n\t{ \"_id\" : \"5c4ea12280477a3b74d1890e\" }\n]"
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites/5c4ea10380477a3b74d1890c",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites",
+								"5c4ea10380477a3b74d1890c"
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg2NTcwMTIsImV4cCI6MTU0ODY2MDYxMn0.6dTZViF72jZcvpHNsLt4Ca3QbA3uwnO9dFi3EIF9lUQ",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\t\n\t{ \"_id\" : \"5c4ea10380477a3b74d1890c\" },\n\t{ \"_id\" : \"5c4ea11580477a3b74d1890d\" },\n\t{ \"_id\" : \"5c4ea12280477a3b74d1890e\" }\n]"
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites",
+								""
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites/",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg2NTcwMTIsImV4cCI6MTU0ODY2MDYxMn0.6dTZViF72jZcvpHNsLt4Ca3QbA3uwnO9dFi3EIF9lUQ",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\t\n\t{ \"_id\" : \"5c4ea10380477a3b74d1890c\" },\n\t{ \"_id\" : \"5c4ea11580477a3b74d1890d\" },\n\t{ \"_id\" : \"5c4ea12280477a3b74d1890e\" }\n]"
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites",
+								""
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg2NTcwMTIsImV4cCI6MTU0ODY2MDYxMn0.6dTZViF72jZcvpHNsLt4Ca3QbA3uwnO9dFi3EIF9lUQ",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\t\n\t{ \"_id\" : \"5c4ea10380477a3b74d1890c\" },\n\t{ \"_id\" : \"5c4ea11580477a3b74d1890d\" },\n\t{ \"_id\" : \"5c4ea12280477a3b74d1890e\" }\n]"
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites",
+								""
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}

@@ -78,7 +78,8 @@ openssl x509 -req -in cert.csr -signkey private.key -out certificate.pem
 `
 
 ### To debug
-
+    - Favorites upon deleting returns an []  which is !== null; need to change that @ 610b2834864ef29c14edba8b7b308674986c1f85; also code was imported from other repo; need to understand in detail of how its working
+    
     - PUT does not work on dishes:dishid/comments for both admin and user
 
     - non secure requests received at http://localhost:3000 or http://localhost:3343 are to be redirected and handled at https://localhost:3343
