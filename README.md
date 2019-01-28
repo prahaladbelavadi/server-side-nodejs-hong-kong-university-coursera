@@ -79,9 +79,18 @@ openssl x509 -req -in cert.csr -signkey private.key -out certificate.pem
 
 ### To debug
     - Favorites upon deleting returns an []  which is !== null; need to change that @ 610b2834864ef29c14edba8b7b308674986c1f85; also code was imported from other repo; need to understand in detail of how its working
-    
+    - Any user is able to acces  all the faavorties collection
     - PUT does not work on dishes:dishid/comments for both admin and user
 
     - non secure requests received at http://localhost:3000 or http://localhost:3343 are to be redirected and handled at https://localhost:3343
 
 promoters and dishes connect to the same database, different collections each named: Dishes, Promotions and Leaders
+
+
+##### Alternative approach to favorites:
+
+In the current favoriteRouter, there is a new collection being made for trackin idividual user's favorites.
+
+In the version I tried, the user collection document had an other field(key value pair) added to the document called favorites whicch would be referenced as an array. It did not work when I tried because I was testing for each individual request.
+
+Adopted the imported method instead. Will check it out later
