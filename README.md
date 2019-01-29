@@ -76,6 +76,8 @@ openssl genrsa 1024 > private.key
 openssl req -new -key private.key -out cert.csr
 openssl x509 -req -in cert.csr -signkey private.key -out certificate.pem
 `
+### To install Front end: angular template:
+Run : `git clone https://github.com/jmuppala/conFusion-Angular6.git`
 
 ### To debug
     - Favorites upon deleting returns an []  which is !== null; need to change that @ 610b2834864ef29c14edba8b7b308674986c1f85; also code was imported from other repo; need to understand in detail of how its working
@@ -94,3 +96,4 @@ In the current favoriteRouter, there is a new collection being made for trackin 
 In the version I tried, the user collection document had an other field(key value pair) added to the document called favorites whicch would be referenced as an array. It did not work when I tried because I was testing for each individual request.
 
 Adopted the imported method instead. Will check it out later
+

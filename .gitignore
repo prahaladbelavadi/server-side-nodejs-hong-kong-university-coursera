@@ -4,6 +4,3 @@ mongodb
 .vscode
 sessions
 reference
-private.key
-cert.csr
-certificate.pem
