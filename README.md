@@ -1,6 +1,8 @@
 # server-side-nodejs-hong-kong-university-coursera
 ##### server-side-nodejs-hong-kong-university-coursera mooc course content, examples, excercises
 
+Working branch: master; branched at milestones
+
 ### Stat:
 https://www.coursera.org/learn/server-side-nodejs/lecture/jvt4y/assignment-3-requirements-video-user-authentication
 
